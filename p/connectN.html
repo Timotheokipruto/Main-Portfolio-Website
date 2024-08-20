@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Video Demo</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .video-demo {
+            text-align: center;
+        }
+        .video-demo video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><a href="../index.html">Timothy Kipruto</a></div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="../index.html/#about">About</a></li>
+            <li><a href="./#experience">Experience</a></li>
+            <li><a href="./#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Timothy Kipruto</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>ConnectN Game Project Video Demo</h1>
+        <div class="video-demo">
+            <video controls>
+                <source src="../Demos/ConnectN.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- <section id="description">
+            <h2>Description</h2>
+            <p>This section describes what the video demo is about. You can provide an overview of the project, its purpose, and key features highlighted in the demo.</p>
+        </section>
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>In this section, describe the challenges you faced while building the project. Explain any technical difficulties, design issues, or other obstacles you had to overcome.</p>
+        </section>
+        <section id="technologies-used">
+            <h2>Technologies Used</h2>
+            <p>List and describe the technologies you used to build the project. This could include programming languages, frameworks, libraries, and tools.</p>
+        </section>
+        <section id="what-i-learned">
+            <h2>What I Learned</h2>
+            <p>Reflect on the learning experiences you had while working on the project. Discuss any new skills you acquired, insights you gained, and how this project contributed to your personal or professional growth.</p>
+        </section> -->
+    </div>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="../assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:timothykipruto007@gmail.com">timothykipruto007@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="../assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/timothykipruto">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+    <footer>
+        <p>Copyright &#169; 2024 Timothy Kipruto. All Rights Reserved.</p>
+      </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

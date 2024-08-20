@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.video-container {
+    position: relative;
+    width: 225px; /* Enlarged initial width */
+    height: 400px; /* Enlarged initial height, 16:9 aspect ratio */
+    cursor: pointer;
+}
+
+.placeholder-image, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-container .placeholder-image {
+    display: block;
+}
+
+.video-container video {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container:hover {
+    position: relative; /* Relative position to allow for overlay */
+    z-index: 10; /* Ensure it appears on top of the placeholder image */
+}
+
+.video-container:hover video {
+    display: block;
+    width: 281px; /* Adjusted width to be larger than the placeholder image */
+    height: 500px; /* Adjusted height, maintaining 16:9 aspect ratio */
+}
+
+.video-container:hover .placeholder-image {
+    opacity: 0.5; /* Make the placeholder image semi-transparent */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .video-container {
+        width: 300px; /* Adjust initial width for smaller screens */
+        height: 169px; /* Adjust initial height */
+    }
+
+    .video-container:hover video {
+        width: 400px; /* Adjusted width for smaller screens */
+        height: 225px; /* Adjusted height, maintaining 16:9 aspect ratio */
+    }
+}
+
+@media (max-width: 400px) {
+    .video-container {
+        width: 250px; /* Adjust initial width for smaller screens */
+        height: 140px; /* Adjust initial height */
+    }
+
+    .video-container:hover video {
+        width: 300px; /* Adjusted width for smaller screens */
+        height: 168px; /* Adjusted height, maintaining 16:9 aspect ratio */
+    }
+}
